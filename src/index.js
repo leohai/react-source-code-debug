@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
-const root = document.getElementById('root')
+import jsx from './pages/ExamplePage'
+import TransitionPage from './pages/TransitionPage'
+import LifeCyclePage from './pages/LifeCyclePage'
+import SuspensePage from './pages/SuspensePage'
+import UseCallbackPage from './pages/UseCallbackPage'
+import UseMemoPage from './pages/UseMemoPage'
 
-// Concurrent mode
-ReactDOM.createRoot(root).render(<App />);
+// ReactDOM.render(jsx, document.getElementById("root"));
 
-// blocking mode
-// ReactDOM.createBlockingRoot(root).render(<App />);
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
-// Sync mode
-// ReactDOM.render(<App />, root);
+// root.render(jsx);
+root.render(<UseMemoPage />)
 
-// console.log('React 源码调试，当前版本：' + React.version);
+console.log('React', React.version) //sy-log
